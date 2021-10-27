@@ -11,6 +11,8 @@ seqtk sample -s1124 oilMP_S4_L001_R2_001.fastq 1500000 > mp2.fastq
 ls -1 | xargs -P 4 -tI{} fastqc {}
 multiqc fastqc
 ```
+![image](https://user-images.githubusercontent.com/71254839/139071755-fa8bfcba-899f-4d03-b7b3-5802f4a2c35d.png)
+[Ссылка](./src/m_report_initial.html)
 - С помощью программ platanus_trim и platanus_internal_trim подрезать чтения по качеству и удалить праймеры
 ```bash
 platanus_trim sub1.fastq sub2.fastq
@@ -21,6 +23,8 @@ platanus_internal_trim mp1.fastq mp2.fastq
 ls -1 | xargs -P 4 -tI{} fastqc {}
 multiqc fastqc
 ```
+![image](https://user-images.githubusercontent.com/71254839/139071683-ea76657e-6644-4883-a26a-c10352be126d.png)
+[Сслыка](./src/m_report_trimmed.html)
 - С помощью программы “platanus assemble” собрать контиги из подрезанных чтений
 ```bash
 platanus assemble -o Poil -t 4 -m 15 -f sub1.fastq.trimmed sub2.fastq.trimmed 2> assemble.log
@@ -114,6 +118,10 @@ seqtk sample -s1124 oilMP_S4_L001_R2_001.fastq 1200000 > mp2.fastq
 ![image](https://user-images.githubusercontent.com/71254839/139065365-595f4685-1bc7-41a8-b51d-91d56309046b.png)
 - Для скаффолдов с закрытыми гэпами
 ![image](https://user-images.githubusercontent.com/71254839/139065328-7742e3fc-69fe-42d3-adcb-4559c5843f2c.png)
+
+Отчет multiqc после подрезаний (также есть и [отчет до подрезаний](./src/o_report_initial.html)):
+![image](https://user-images.githubusercontent.com/71254839/139071913-8bc28c6c-8fcf-481d-be8b-aa43d8f4bd90.png)
+[Ссылка](./src/o_report_trimmed.html)
 
 Можем заметить, что результаты получились неоднозначные.
 
