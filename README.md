@@ -123,7 +123,7 @@ seqtk sample -s1124 oilMP_S4_L001_R2_001.fastq 1200000 > mp2.fastq
 ![image](https://user-images.githubusercontent.com/71254839/139071913-8bc28c6c-8fcf-481d-be8b-aa43d8f4bd90.png)
 [Ссылка](./src/o_report_trimmed.html)
 
-Можем заметить, что результаты получились неоднозначные.
+Видно, что количество гэпов не сократилось, однако сократилась их суммарная длина.
 
 # Приложения
 [Ссылка на Google Collab](https://colab.research.google.com/drive/1AZk6JoZafBHLGbuaLwoXrkGSn8qBsi8Y?usp=sharing)
