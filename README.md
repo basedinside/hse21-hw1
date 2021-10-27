@@ -116,3 +116,6 @@ seqtk sample -s1124 oilMP_S4_L001_R2_001.fastq 1200000 > mp2.fastq
 ![image](https://user-images.githubusercontent.com/71254839/139065328-7742e3fc-69fe-42d3-adcb-4559c5843f2c.png)
 
 Можем заметить, что результаты получились неоднозначные.
+
+# Приложения
+[Ссылка на Google Collab](https://colab.research.google.com/drive/1AZk6JoZafBHLGbuaLwoXrkGSn8qBsi8Y?usp=sharing)
